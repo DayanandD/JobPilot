@@ -1,0 +1,82 @@
+{
+  "schema": 3,
+  "required_executas": [
+    {
+      "tool_id": "tool-dev-jobpilot"
+    }
+  ],
+  "optional_executas": [],
+  "host_capabilities": [
+    "llm.sample",
+    "llm.complete",
+    "llm.embed",
+    "web.search",
+    "web.fetch",
+    "aps.kv",
+    "aps.files",
+    "host.upload"
+  ],
+  "storage": {
+    "kv": true,
+    "files": true,
+    "scopes": {
+      "user": "rw",
+      "app": "rw"
+    }
+  },
+  "system_prompt_addendum": "You are JobPilot AI, an AI job search and application copilot. Help users discover matching jobs, parse resumes, calculate deterministic match scores, generate cover letters, track job applications, and practice interviews using JobPilot tools.",
+  "user_message_prefix_template": "[JobPilot] {user_message}",
+  "tags": ["career", "jobs", "productivity", "ai-copilot"],
+  "ui": {
+    "bundle": {
+      "format": "static-spa",
+      "entry": "index.html"
+    },
+    "form_factors": ["desktop", "mobile"],
+    "views": [
+      {
+        "name": "main",
+        "title": "JobPilot AI Dashboard",
+        "default": true,
+        "min_size": {
+          "w": 480,
+          "h": 360
+        },
+        "default_size": {
+          "w": 1024,
+          "h": 720
+        },
+        "max_size": {
+          "w": 1920,
+          "h": 1200
+        },
+        "resizable": true,
+        "movable": true,
+        "single_instance": true,
+        "summary_template": "JobPilot AI Workspace"
+      }
+    ],
+    "host_api": {
+      "tools": ["required:*"],
+      "llm": ["complete", "stream", "embed"],
+      "agent": {
+        "session": {
+          "auto": true,
+          "fixed": false
+        },
+        "tools": ["*"]
+      },
+      "web": ["search", "fetch"],
+      "storage": ["get", "set", "delete", "list"],
+      "files": ["upload_init", "upload_finalize", "download_url", "download", "list", "delete"],
+      "upload": ["inline", "negotiate", "confirm"],
+      "window": ["set_title", "resize", "focus", "close", "open_view", "report_error"]
+    }
+  },
+  "dev": {
+    "seed_storage": {
+      "booted_once": true
+    },
+    "user_id": 1
+  }
+}

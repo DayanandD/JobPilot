@@ -1,0 +1,15 @@
+[project]
+name = "jobpilot-executa"
+version = "1.0.0"
+description = "JobPilot Executa Plugin for Anna AI OS"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

@@ -1,0 +1,11 @@
+{
+  "name": "JobPilot AI",
+  "slug": "jobpilot",
+  "tagline": "AI Job Search & Application Copilot",
+  "category": "productivity",
+  "bundled_executas": {
+    "jobpilot": {
+      "path": "executas/jobpilot"
+    }
+  }
+}

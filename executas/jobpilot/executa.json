@@ -1,0 +1,9 @@
+{
+  "tool_id": "tool-dev-jobpilot",
+  "name": "jobpilot",
+  "type": "python",
+  "display_name": "JobPilot Executa Tool",
+  "version": "1.0.0",
+  "description": "Executa plugin for JobPilot AI providing job search, resume parsing, candidate matching, and application copilot capabilities.",
+  "command": ["C:/Users/Dayanand/AppData/Local/Programs/Python/Python311/python.exe", "plugin.py"]
+}
