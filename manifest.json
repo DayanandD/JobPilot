@@ -1,10 +1,6 @@
 {
   "schema": 3,
-  "required_executas": [
-    {
-      "tool_id": "tool-dev-jobpilot"
-    }
-  ],
+  "required_executas": [],
   "optional_executas": [],
   "host_capabilities": [
     "llm.sample",
@@ -12,8 +8,6 @@
     "llm.embed",
     "web.search",
     "web.fetch",
-    "aps.kv",
-    "aps.files",
     "host.upload"
   ],
   "storage": {
