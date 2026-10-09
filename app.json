@@ -1,11 +1,6 @@
 {
   "name": "JobPilot AI",
-  "slug": "jobpilot",
-  "tagline": "AI Job Search & Application Copilot",
-  "category": "productivity",
-  "bundled_executas": {
-    "jobpilot": {
-      "path": "executas/jobpilot"
-    }
-  }
+  "slug": "jobpilot-ai",
+  "tagline": "Find fresh live job listings, calculate 6-vector match scores, generate tailored AI cover letters, and track applications on-place.",
+  "category": "productivity"
 }
